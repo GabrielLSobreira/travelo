@@ -2,7 +2,7 @@ import { FooterContainer } from './styles';
 import { BsLinkedin, BsFacebook } from 'react-icons/bs';
 import { AiFillInstagram } from 'react-icons/ai';
 
-export default function index() {
+export default function Footer() {
   return (
     <FooterContainer>
       <span>Copyright &copy; 2022 Travelo. All rights reserved</span>

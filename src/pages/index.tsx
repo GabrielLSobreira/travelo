@@ -6,6 +6,7 @@ import About from '../components/About';
 import Places from '../components/Places';
 import Testimonials from '../components/Testimonials';
 import Footer from '../components/Footer';
+import ScrollToTop from '../components/ScrollToTop';
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <ScrollToTop />
       <Navbar />
       <Hero />
       <About />

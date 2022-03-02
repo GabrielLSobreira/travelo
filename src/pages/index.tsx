@@ -5,6 +5,7 @@ import Hero from '../components/Hero';
 import About from '../components/About';
 import Places from '../components/Places';
 import Testimonials from '../components/Testimonials';
+import Footer from '../components/Footer';
 
 const Home: NextPage = () => {
   return (
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
       <About />
       <Places />
       <Testimonials />
+      <Footer />
     </>
   );
 };

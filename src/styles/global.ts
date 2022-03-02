@@ -28,4 +28,13 @@ export const GlobalStyle = createGlobalStyle`
   li {
     list-style : none;
   }
+
+  ::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: #14213d;
+  }
+
+  ::-webkit-scrollbar-thumb {
+  background-color: #4539e6;
+  }
 `;

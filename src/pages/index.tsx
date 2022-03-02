@@ -1,14 +1,17 @@
 import Head from 'next/head';
 import type { NextPage } from 'next';
+import Navbar from '../components/Navbar';
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>Travelo</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-    </div>
+
+      <Navbar />
+    </>
   );
 };
 

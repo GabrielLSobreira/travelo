@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Head from 'next/head';
 import type { NextPage } from 'next';
 import Navbar from '../components/Navbar';
@@ -9,6 +10,31 @@ import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 
 const Home: NextPage = () => {
+  useEffect(() => {
+    async function animate() {
+      const scrollreveal = (await import('scrollreveal')).default;
+      const sr = scrollreveal({
+        origin: 'top',
+        distance: '80px',
+        duration: 2000,
+        reset: true,
+      });
+      sr.reveal(
+        `nav,
+      #home,
+      #about,
+      #recommend,
+      #testimonials,
+      footer`,
+        {
+          opacity: 0,
+          interval: 300,
+        }
+      );
+    }
+    animate();
+  }, []);
+
   return (
     <>
       <Head>

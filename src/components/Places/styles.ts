@@ -70,4 +70,31 @@ export const Section = styled.section`
       justify-content: space-between;
     }
   }
+
+  @media screen and (min-width: 760px) and (max-width: 850px) {
+    .destinations {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0;
+    }
+  }
+
+  @media screen and (min-width: 280px) and (max-width: 760px) {
+    .packages {
+      ul {
+        li {
+          padding: 0 0.5rem;
+          font-size: 2vh;
+          padding: 1rem;
+        }
+        .active {
+          border-bottom-width: 0.3rem;
+        }
+      }
+    }
+
+    .destinations {
+      grid-template-columns: 1fr;
+      padding: 0;
+    }
+  }
 `;

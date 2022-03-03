@@ -1,6 +1,10 @@
-import { Nav } from './styles';
+import { useState } from 'react';
+import { Nav, ResponsiveNav } from './styles';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { VscChromeClose } from 'react-icons/vsc';
 
 export default function Navbar() {
+  const [navbarState, setNavbarState] = useState(false);
   return (
     <>
       <Nav>
@@ -9,7 +13,13 @@ export default function Navbar() {
             <img src="/assets/logo.png" alt="Travelo Logo" />
             Travelo
           </div>
-          <div className="toggle"></div>
+          <div className="toggle">
+            {navbarState ? (
+              <VscChromeClose onClick={() => setNavbarState(false)} />
+            ) : (
+              <GiHamburgerMenu onClick={() => setNavbarState(true)} />
+            )}
+          </div>
         </div>
         <ul>
           <li>
@@ -27,6 +37,30 @@ export default function Navbar() {
         </ul>
         <button>Connect</button>
       </Nav>
+      <ResponsiveNav state={navbarState}>
+        <ul>
+          <li>
+            <a href="#home" onClick={() => setNavbarState(false)}>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#about" onClick={() => setNavbarState(false)}>
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#recommend" onClick={() => setNavbarState(false)}>
+              Places
+            </a>
+          </li>
+          <li>
+            <a href="#testimonials" onClick={() => setNavbarState(false)}>
+              Testimonials
+            </a>
+          </li>
+        </ul>
+      </ResponsiveNav>
     </>
   );
 }

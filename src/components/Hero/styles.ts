@@ -123,9 +123,6 @@ export const Section = styled.section`
 
         .container {
           padding: 0 0.8rem;
-          input[type='date'] {
-            padding-left: 1rem;
-          }
         }
 
         button {

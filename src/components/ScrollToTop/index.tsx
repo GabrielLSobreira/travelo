@@ -8,9 +8,11 @@ export default function ScrollToTop() {
     window.scrollTo({ top: 0 });
   };
 
-  window.addEventListener('scroll', () => {
-    window.pageYOffset > 200 ? setScrollState(true) : setScrollState(false);
-  });
+  if (typeof window !== 'undefined') {
+    window.addEventListener('scroll', () => {
+      window.pageYOffset > 200 ? setScrollState(true) : setScrollState(false);
+    });
+  }
 
   return (
     <ToTop onClick={toTop} scrollState={scrollState}>
